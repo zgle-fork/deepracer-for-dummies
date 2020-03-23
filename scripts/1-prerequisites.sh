@@ -61,3 +61,7 @@ then
 else
     echo "First stage done. Please reboot and run init.sh"
 fi
+
+# VNC
+echo "wget https://www.realvnc.com/download/file/viewer.files/VNC-Server-6.7.1-Linux-x64.deb"
+echo "sudo dpkg -i VNC-Server-6.7.1-Linux-x64.deb"
