@@ -63,5 +63,5 @@ else
 fi
 
 # VNC
-echo "wget https://www.realvnc.com/download/file/viewer.files/VNC-Server-6.7.1-Linux-x64.deb"
-echo "sudo dpkg -i VNC-Server-6.7.1-Linux-x64.deb"
+echo "Open your Ubuntu browser to download VNC package: https://www.realvnc.com/en/connect/download/viewer/"
+echo "then, e.g., sudo dpkg -i VNC-Server-6.7.1-Linux-x64.deb"
