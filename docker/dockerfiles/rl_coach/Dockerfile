@@ -10,19 +10,19 @@ RUN apt-get update
 RUN apt-get -y install docker-ce
 
 # add required deepracer directories to the container
-RUN mkdir /deepracer
-RUN mkdir /deepracer/rl_coach
-RUN mkdir /deepracer/sagemaker-python-sdk
+RUN mkdir -p /deepracer
+RUN mkdir -p /deepracer/rl_coach
+RUN mkdir -p /deepracer/sagemaker-python-sdk
 WORKDIR /deepracer
 ADD rl_coach rl_coach
 ADD sagemaker-python-sdk sagemaker-python-sdk
 
 # create sagemaker configuration
-RUN mkdir /root/.sagemaker
+RUN mkdir -p /root/.sagemaker
 COPY config.yaml /root/.sagemaker/config.yaml
 
-RUN mkdir /robo
-RUN mkdir /robo/container
+RUN mkdir -p /robo
+RUN mkdir -p /robo/container
 
 # install dependencies
 RUN pip install -U sagemaker-python-sdk/ awscli ipython pandas "urllib3==1.22" "pyyaml==3.13" "python-dateutil==2.8.0"
